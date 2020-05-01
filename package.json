@@ -25,7 +25,9 @@
     "examples": "gulp examples",
     "gh-deploy": "gulp build-gh-pages && bash ./gh-deploy.sh",
     "prepublishOnly": "gulp build",
-    "test": "gulp test-script"
+    "test": "gulp test-script",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0"
@@ -71,6 +73,8 @@
     "classnames": "^2.2.5",
     "lodash": "^4.17.5",
     "nanoid": "^2.0.0",
-    "prop-types": "^15.5.8"
-  }
+    "prop-types": "^15.5.8",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
